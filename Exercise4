@@ -1,0 +1,53 @@
+Assignment 1
+
+Exercise 4.1
+
+You are still logged in.
+
+exercise 4.2
+Decoded:
+user:passwd --> dXNlcjpwYXNzd2Q=
+
+GEBRUIK : 
+HEAD /basic-auth/user/passwd HTTP/1.1
+Host:httpbin.org
+Authorization: Basic dXNlcjpwYXNzd2Q=
+
+Terminal Command Line:
+pracuser@pracuser-VirtualBox:~$ telnet httpbin.org 80|tee "exercise4tee"Trying 54.175.222.246...
+Connected to httpbin.org.
+Escape character is '^]'.
+HEAD /basic-auth/user/passwd HTTP/1.1
+Host:httpbin.org
+Authorization: Basic dXNlcjpwYXNzd2Q=
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 11 Nov 2015 15:44:59 GMT
+Content-Type: application/json
+Content-Length: 47
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+
+Exercise 4.3
+It is not the same as reloading the page. 
+
+Terminal Command Line:
+pracuser@pracuser-VirtualBox:~$ telnet httpbin.org 80
+Trying 54.175.222.246...
+Connected to httpbin.org.
+Escape character is '^]'.
+HEAD /basic-auth/user/passwd HTTP/1.1
+Host:httpbin.org
+
+HTTP/1.1 401 UNAUTHORIZED
+Server: nginx
+Date: Wed, 11 Nov 2015 15:48:09 GMT
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+WWW-Authenticate: Basic realm="Fake Realm"
+Access-Control-Allow-Credentials: true
+
