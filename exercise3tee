@@ -1,0 +1,53 @@
+Trying 54.175.219.8...
+Connected to httpbin.org.
+Escape character is '^]'.
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 11 Nov 2015 15:18:40 GMT
+Content-Type: application/json
+Content-Length: 270
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+{
+  "args": {}, 
+  "data": "Hello World!", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Content-Length": "12", 
+    "Content-Type": "text/plain", 
+    "Host": "httpbin.org"
+  }, 
+  "json": null, 
+  "origin": "145.94.253.244", 
+  "url": "http://httpbin.org/put"
+}
+HTTP/1.1 404 NOT FOUND
+Server: nginx
+Date: Wed, 11 Nov 2015 15:19:17 GMT
+Content-Type: text/html
+Content-Length: 233
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Wed, 11 Nov 2015 15:19:17 GMT
+Content-Type: text/html
+Content-Length: 166
+Connection: close
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body bgcolor="white">
+<center><h1>400 Bad Request</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
