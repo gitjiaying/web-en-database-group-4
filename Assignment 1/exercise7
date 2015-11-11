@@ -9,7 +9,7 @@ Ten basic TODO list features for every TODO web application
 5. if more TODO list items are on one date, sort these items according to time
 6. set priority level to a TODO list item
 7. sort TODO list items according to priority level
-8. create folder to store lists together
-9. delete folder that store lists
+8. create/delete folder to store lists together
+9. set TODO list item to done/inactive
 10. undo last change, either in folder, list, list item etc.
 
