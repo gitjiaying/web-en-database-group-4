@@ -2,7 +2,7 @@ Assignment 1
 
 Exercise 4.1
 
-You are still logged in.
+You are automatically logged in again by the browser. So the browser is smart enough to do the authorization for you, everytime you reload the page.
 
 exercise 4.2
 Decoded:
@@ -32,7 +32,7 @@ Access-Control-Allow-Credentials: true
 
 
 Exercise 4.3
-It is not the same as reloading the page. 
+It is not the same as reloading the page. Since HTTP is stateless. WIth every HTTP request you make, you have to send your Authorization again.
 
 Terminal Command Line:
 pracuser@pracuser-VirtualBox:~$ telnet httpbin.org 80
