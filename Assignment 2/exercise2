@@ -1,0 +1,9 @@
+Assignment 2
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript 
+Exercise 2: OO paradigm in JavaScript
+1. class MyApplication:
+	- attributes: todolists and sign-up/sign-in/log-out buttons and other general action buttons
+2. class todoList: 
+	- attributes/characteristics: todo-items, name, (tag)
+ 
+
