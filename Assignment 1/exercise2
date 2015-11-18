@@ -29,7 +29,7 @@ host:www.nu.nl
 
 Exercise 2.3
 Expires: Wed, 11 Nov 2015 14:28:21 GMT
-
+With the Expires Header and Cache-Control Header you tell the browser how long it can store this data in its cache before checking if there is a new version of this data. 
 
 Exercise 2.4
 HEAD /sport HTTP/1.1
