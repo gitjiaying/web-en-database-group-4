@@ -1,0 +1,13 @@
+Splash screen:
+
+- onder de titel moet een beschrijving komen die aangeeft dat onze app een todo app is en voor wie het is(target audience). Kan ook door in onze titelblok de titel te veranderen in de beschrijving (loop van die animatie).
+
+
+Applicatie screen:
+
+- een knopje in de balk dat ervoor zorgt dat je eerstvolgende TODO task ziet.
+- een search/ sort knop die je vraagt waarop (label, datum, toevoeginsdatum) je wilt sorteren en in welke list. Of je zoekt alle todo tasks in een list op een door de user gegeven datum of datum-interval of label.
+- een plus knopje in iedere todo list die een todo task toevoegt aan die list.
+- voor elke tasknaam en iedere titel van een list een deleteknopje die dan vraagt: zeker weten?
+
+
