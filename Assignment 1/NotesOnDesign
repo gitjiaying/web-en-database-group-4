@@ -5,9 +5,11 @@ Splash screen:
 
 Applicatie screen:
 
+- achter elke taks zie je de due date en de letterkleur geeft de label aan.
 - een knopje in de balk dat ervoor zorgt dat je eerstvolgende TODO task ziet.
 - een search/ sort knop die je vraagt waarop (label, datum, toevoeginsdatum) je wilt sorteren en in welke list. Of je zoekt alle todo tasks in een list op een door de user gegeven datum of datum-interval of label.
 - een plus knopje in iedere todo list die een todo task toevoegt aan die list.
-- voor elke tasknaam en iedere titel van een list een deleteknopje die dan vraagt: zeker weten?
+- voor elke tasknaam en iedere titel van een list een deleteknopje en done-knopje die dan vraagt: zeker weten?
+- Optioneel: als de user op een list klikt, dan zie je een schema (zoals in Google Calendar?) Dan is alles dus al gesorteerd op datum en je kunt dan ook nog een tijd aan een task verbinden en dan kunnen we ook sorteren op tijd.
 
 
