@@ -1,0 +1,71 @@
+Assignment 2
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
+ 
+Exercise 2: OO paradigm in JavaScript
+1. class MyTODOApplication:
+	- attributes: 
+		- List todolists 
+		- button sign-up/sign-in/log-out and other general action buttons
+		- (int numOfLists)
+
+	- methods:
+		- (constructor() : todolists is an empty List of TodoList-objects)
+		- void deleteList(TodoList todoList) : deletes the Todo-List todoList if it exist in todolists.
+		- void addList(TodoList todoList) : adds the TodoList todoList. This TodoList has to have a different name than other TodoLists in this MyTODOApplication
+
+2. class TodoList: 
+	- attributes/characteristics:
+		- List todoItems
+		- String name
+		- float/int status (percentage todo-items done/how many todo-items not done)
+		- (String tag (importance rating))
+		- (int numOfItems)
+
+	- methods:
+		- constructor(String newName(, String newTag)) : empty todoItems, name is newName, status is NaN, tag is newTag and numOfItems is zero.
+		- void addItem(Item item) : adds todo-item "item" to todoItems. Adds one to numOfItems.
+		- void deleteItem(Item item) : deletes a todo-item from todoItems. Subtracts one from numOfItems.
+		- void sortList(String itemCharacteristic) : sorts the todo-list's items according to "itemCharacteristic" like due date and importance.
+
+3. class Item:
+	- attributes: 
+		- String content
+		- (String name/preview)
+		- String dueDate
+		- String tag (of importance) (when sorting, create a switch in JavaScript that converts the tag to a numerical value(int))
+		- Reminder reminder 
+		- (int maxCharactersInContent)
+		- boolean done
+
+	- methods:
+		- constructor((String newName, )String newDueDate, String newTag, Reminder newReminder) : content is empty String, name is newName, dueDate is newDueDate, tag is newTag and reminder is newReminder.
+		- void addContent(String newContent) : content is newContent (if length newContent < maxCharactersInContent and length newContent > 0).
+		- boolean hasContent() : if this item has empty content, the user cannot save this item.
+		- boolean hasDueDate() : if dueDate is a nullpointer, this user cannot save this item.
+		- void setDueDate(String newDueDate) : dueDate is newDueDate.
+		- boolean hasTag() : same idea as hasDueDate.
+		- void setTag(String newTag) : tag is newTag.
+		- void setReminder(Reminder newReminder) : reminder is set to newReminder.
+		- void setMaxChar(int max) : maxCharactersInContent is max.
+		- void setDone(boolean status) : done is status.
+
+4. class Reminder: (or Interface, so that Item implements Reminder??)
+	- attributes:
+		- boolean status (active or not active)
+		- String reminderDate
+		- Alarm reminderAlarm (alarm protocol)
+
+	- methods:
+		- (constructor() : status is false, reminderDate is null etc.)
+		- void setStatus(boolean newStatus) : status is newStatus
+		- void reminderProtocol() : is status is false, the protocol will not execute any commands. If status is true, the protocol waits for userinput and executes the all available methods (described below). 
+		- void setReminderDate(String date) : reminderDate is date.
+		- etc. COMPLETE THIS and make a class Button if needed.	
+	
+	
+
+			
+		
+		
+ 
+

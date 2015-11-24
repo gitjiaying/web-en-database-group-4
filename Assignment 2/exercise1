@@ -25,5 +25,5 @@ Actions:
 5. Sort the items according to due date / importance
 6. Add TODO list
 7. Delete TODO list
-8. Sort all todo items in ALL todo lists (send the user to a new page?)
+8. Sort all todo items in ALL todo lists (send the user to a new page with all the tasks sorted) according to due date and importance rating.
 
