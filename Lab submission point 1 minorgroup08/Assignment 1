@@ -1,0 +1,115 @@
+Assignment 1
+
+Exercise 2.1
+
+Terminal command line:
+
+pracuser@pracuser-VirtualBox:~$ telnet www.nu.nl 80
+HEAD /sport HTTP/1.1
+host:www.nu.nl
+
+HTTP/1.1 200 OK 				// 200 OK is the right response when you put a request
+Date: Wed, 11 Nov 2015 14:27:18 GMT
+Expires: Wed, 11 Nov 2015 14:28:21 GMT
+Vary: Accept-Encoding
+Cache-Control: max-age=60
+Last-Modified: Wed, 11 Nov 2015 14:27:21 GMT
+Content-Type: text/html; charset=utf-8
+Age: 16
+Connection: keep-alive
+Via: 1.1 sanin508.ixa
+
+
+GET /sport HTTP/1.1
+host:www.nu.nl
+
+//<htmlcode> see nuFile.html
+
+
+Exercise 2.3
+Expires: Wed, 11 Nov 2015 14:28:21 GMT
+With the Expires Header and Cache-Control Header you tell the browser how long it can store this data in its cache before checking if there is a new version of this data. 
+
+Exercise 2.4
+HEAD /sport HTTP/1.1
+Host:www.nu.nl
+If-Modified-Since:Wed, 11 Nov 2015 14:32:55 GMT
+
+<NO RESPONSE> which means that there was no change in the sportpage for the last ten minutes.
+
+Exercise 3.1
+THe response is a 404 and 400. So the content-length has to be correct in order to make a PUT-request.
+
+Exercise 4.3
+No it is not the same as reloading the page in the browser, because the browser will automatically re-authorize while in the terminal you have to re-authorize yourself by using the field Authorization.
+
+Exercise 5.1
+
+TODO web app 1: http://todoist.com/
+TODO web app 2: http://www.any.do/
+
+Exercise 5.2
+
+<TODO web app 1>
+design aspect 1: Immediately shows todays tasks.
+Positive.
+
+design aspect 2: Red colour. Agitating.
+Negative.
+
+design aspect 3: A lot of buttons and tags.
+Negative.
+
+
+<TODO web app 2>
+design aspect 1: Simple and ordered design.
+Positive.
+
+design aspect 2: Blue colour. Relaxing.
+Positive.
+
+design aspect 3: The lists do not show a preview of the list-elements.
+Negative.
+
+Exercise 6
+small-scale usability test:
+todo list item which deadline is on november 30 and you recieve a reminder a day before the actual deadline. 
+
+TODO web app 1: http://todoist.com/
+action 1: click on begin nu
+one click
+one second
+easy to find, intuitive to perform
+
+action 2: Register with mail
+four clicks 
+30 seconds
+small and organized form, intuitive to perform
+
+action 3: click on beginnen
+one click
+one second
+intuitive to perform
+
+action 4: create todo 30 November
+6 clicks
+4 minutes
+But no reminder possible so made a new task for 29 november that is the reminder for 30 november. For reminders, one had to upgrade to premium.
+Not intuitive to create a reminder.
+
+TODO web app 2: http://www.any.do/
+action 1: sign up for free with mail
+one click
+30 seconds
+easy to do, intuitive to perform
+
+action 2: choose what to organize
+two clicks
+15 seconds
+intuitive to perform
+
+action 3: create todo on 30 november
+10 clicks
+2 minutes
+not intuitive, have to look how to set the date, can attach a reminder on the day befor so made a new task for 29 november that is the reminder for 30 november.
+

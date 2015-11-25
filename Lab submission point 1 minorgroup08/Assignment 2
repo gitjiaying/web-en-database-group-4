@@ -1,13 +1,62 @@
 Assignment 2
 
-Terminal commands: 
-//creating database dump
-mysql -u root -p -e "CREATE DATABASE dump"
-password: webdata
+The TODO Web application is available in desktop view and mobile view.
 
-//attach sql file to db dump
-mysql -u root -p dump < "Desktop/DB Dump.sql"
-password: webdata
+Exercise 1: Plan of actions
+Splash screen:
+If the user has not signed up for our application yet or the browsercache does not have valid information for our web application, they will be shown two options(buttons) and a form(to fill in their user info):
+1. SIGN-UP button that will send the user to the application page IF the user has correctly filled in the above form.
+2. SIGN-IN button that show the user to the log-in pop-up venster. 
+
+Log-in pop-up venster:
+Here the user has to fill in their user.email and user.password in the shown form.
+By clicking the SIGN-IN button the user information will be checked and if it is invalid the log-in page will be reloaded and an errortext will tell the user that the user information is invalid.
+If the user information is valid, the SIGN-IN button will send the user to the application page.
+
+<From this point on, if the browser settings allow this, the application page, with the user logged in, will always be loaded when the user returns to our site.>	
+
+Application page screen:
+
+Actions:
+1. Add a todo item with a due date and an importance rating
+2. Delete a todo item
+3. Set the status of a todo to “done”
+4. Change an existing todo item’s content (i.e. todo text, due date, importance rating and status)
+5. Sort the items according to due date / importance
+6. Add TODO list
+7. Delete TODO list
+8. Sort all todo items in ALL todo lists (send the user to a new page with all the tasks sorted) according to due date and importance rating.
+
+Exercise 2: Design pattern Module
+Objects: TodoList, TodoItem, object Reminder
+
+TodoList attributes:
+- list of TodoItems
+- label priority
+
+TodoList Members (methods):
+- sort according to due dates
+- sort according to prioritylabels
+- delete TodoItem
+- add TodoItem
+
+TodoItem attributes:
+- Duedate
+- priority
+- content
+- reminder toggle
+
+TodoItem members:
+- setDuedate
+- setPriority
+- setContent
+- setReminder
+
+Reminder attributes:
+- reminderDate
+
+Reminder members:
+- setDate
 
 Exercise 5
 //connecting to mysql server

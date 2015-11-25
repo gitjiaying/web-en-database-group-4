@@ -1,3 +1,33 @@
 Assignment 2
 
-Exercise2
+Exercise 2: Design pattern Module
+Objects: TodoList, TodoItem, object Reminder
+
+TodoList attributes:
+- list of TodoItems
+- label priority
+
+TodoList Members (methods):
+- sort according to due dates
+- sort according to prioritylabels
+- delete TodoItem
+- add TodoItem
+
+TodoItem attributes:
+- Duedate
+- priority
+- content
+- reminder toggle
+
+TodoItem members:
+- setDuedate
+- setPriority
+- setContent
+- setReminder
+
+Reminder attributes:
+- reminderDate
+
+Reminder members:
+- setDate
+
