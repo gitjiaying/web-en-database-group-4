@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get Your Sh*t Done</title>
+</head>
+
+<body leftmargin="0px" bottommargin="0px">
+	<header align="center">
+    	<img src="elements/Banner2.png" width="50%">
+    </header>
+    
+    <main align="center">
+	<div>
+		<form id="Sign-up-form">
+			First name: <br>
+			<input type = "text" name="firstname" value="">
+			<br>
+			Last name: <br>
+			<input type="text" name ="lastname" value="">
+			<br>
+			Your email: <br>
+			<input type = "text" name = "email1" value="">
+			<br>
+			Email validation: <br>
+			<input type ="text" name = "email2" value="">
+			<br>
+			<input id="Sign-up" type="submit" value="Sign Up" onClick = "document.getElementById('Sign-up-form').submit();">
+		</form>
+		<button	id="Sign-in" type="button" onClick="signIn()">Sign In</button>
+	
+
+	</div>
+   	</main>
+    
+    <footer align="center">
+    	<img src="elements/footer.png" width="100%">
+    </footer>
+    <script>
+	function signIn() {
+
+	//redirecting in javascript
+	window.location='Logged-in.html';
+}
+	
+	</script> 
+</body>
+</html>

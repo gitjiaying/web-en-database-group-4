@@ -35,10 +35,19 @@ HEAD /sport HTTP/1.1
 Host:www.nu.nl
 If-Modified-Since:Wed, 11 Nov 2015 14:32:55 GMT
 
-<NO RESPONSE> which means that there was no change in the sportpage for the last ten minutes.
+HTTP/1.1 200 OK
+Date: Wed, 25 Nov 2015 16:08:52 GMT
+Expires: Wed, 25 Nov 2015 16:10:12 GMT
+Vary: Accept-Encoding
+Cache-Control: max-age=60
+Last-Modified: Wed, 25 Nov 2015 16:09:12 GMT
+Content-Type: text/html; charset=utf-8
+Age: 36
+Connection: keep-alive
+Via: 1.1 sanin508.ixa
 
 Exercise 3.1
-THe response is a 404 and 400. So the content-length has to be correct in order to make a PUT-request.
+If content-length smaller: directly cut off. If content-length higher: terminal waits for input until connection broken. So the content-length has to be correct in order to make a PUT-request.
 
 Exercise 4.3
 No it is not the same as reloading the page in the browser, because the browser will automatically re-authorize while in the terminal you have to re-authorize yourself by using the field Authorization.

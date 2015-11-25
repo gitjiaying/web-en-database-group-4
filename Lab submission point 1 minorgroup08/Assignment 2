@@ -27,7 +27,7 @@ Actions:
 7. Delete TODO list
 8. Sort all todo items in ALL todo lists (send the user to a new page with all the tasks sorted) according to due date and importance rating.
 
-Exercise 2: Design pattern Module
+Exercise 2: Design pattern Prototype
 Objects: TodoList, TodoItem, object Reminder
 
 TodoList attributes:
@@ -306,8 +306,11 @@ ToDoList(<Id>, Name, CreationDate, Owner, IsPublic)
 User(<Id>, Name, Email, Username, Password)
 
 Foreign keys (they denote the referential integrity contraints):
-ItemTag.TagId <-> Tag.Id, ToDoItem.Id, ToDoAssignment.ToDoId
+ItemTag.TagId <-> Tag.Id
+ItemTag.ToDoId <-> ToDoItem.Id, ToDoAssignment.ToDoId
 ToDoAssignment.AssigneeId <-> User.Id
 ToDoItem.ToDoListId <-> ToDoList.Id
+
+Probably MULs are foreign keys.
 
 
