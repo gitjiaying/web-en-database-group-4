@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+	
+
+body{
+	background-image:url(../../../../TU%20delft/Web-%20en%20database/Log-in_Site/elements/Oude_Kerk_te_Delft._Foto_Roel_van_Tatenhove,_foto_december_2009.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	margin:0px;
+}
+
+header{
+	align-self:center;
+	align-content:center;
+}
+
+#Header_logo{
+	width:1000px;
+}
+
+#inlog-box{
+	width:300px;
+}
+
+#Sign-up-form{
+	display:inline-block;
+	padding-left:2%;
+	padding-right:2%;
+	width:auto;
+	height:auto;
+	background-color:rgba(255,255,255,0.80);
+	border-radius:5%;
+}
+
+#header-form{
+	font:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size:22px;
+	font-weight:lighter;
+	color:rgba(71,71,71,1.00);
+}
+
+#Button-holder{
+	margin-bottom:10%;
+	margin-top:10%;
+}
+
+#Sign-up{
+	background-color:rgba(139,208,118,1.00);
+	border-radius:5px;
+	border:none;
+	width:100px;
+	height:40px;
+	margin:5px;
+	margin-left:0;
+}
+
+#Sign-in{
+	background-color:rgba(255,89,89,1.00);
+	border-radius:5px;
+	border:none;
+	width:100px;
+	height:40px;
+	margin:5px;
+}
+
+input{
+	font-size:18px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+footer{
+	height:8%;
+	width:100%;
+	bottom:0px;
+	position:fixed;
+	background-color:#FF4F51;
+}
+
+#footer-picture{
+	margin-top:1%;
+	width:20%;
+}
