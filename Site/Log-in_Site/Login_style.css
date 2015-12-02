@@ -16,6 +16,8 @@ header{
 
 #Header_logo{
 	width:1000px;
+	align-self:center;
+
 }
 
 #inlog-box{
@@ -54,6 +56,18 @@ header{
 	margin-left:0;
 }
 
+#Sign-up:hover {
+	background-color:rgba(255,255,255,1.00);
+	border-radius:5px;
+	border:1px;
+	border-style:solid;
+	border-color:rgba(139,208,118,1.00);
+	width:100px;
+	height:40px;
+	margin:5px;
+	margin-left:0;
+}
+
 #Sign-in{
 	background-color:rgba(255,89,89,1.00);
 	border-radius:5px;
@@ -63,9 +77,36 @@ header{
 	margin:5px;
 }
 
+#Sign-in:hover{
+	background-color:rgba(255,255,255,1.00);
+	border-radius:5px;
+	border:1px;
+	border-style:solid;
+	border-color:rgba(255,89,89,1.00);
+	width:100px;
+	height:40px;
+	margin:5px;
+}
+
+
 input{
 	font-size:18px;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+#div1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
 }
 
 
@@ -77,7 +118,13 @@ footer{
 	background-color:#FF4F51;
 }
 
+footer:hover{
+	 animation-name: example;
+    animation-duration: 4s;
+}
+
 #footer-picture{
 	margin-top:1%;
 	width:20%;
 }
+
