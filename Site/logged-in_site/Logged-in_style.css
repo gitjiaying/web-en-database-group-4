@@ -9,14 +9,15 @@ body{
 #header-holder{
 	width:100%;
 	position:fixed;
-	height:50px;
+	height:70px;
 	background-color:#FF4F51;
+	box-shadow: 0px 0px 8px #848484;
 }
 
 #header-logo{
 	width:75;
 	margin-left:10px;
-	margin-top:10px;
+	margin-top:20px;
 	float:left;
 }
 
@@ -28,14 +29,67 @@ body{
 
 #menu-button{
 	width:40px;
-	margin:10px;
+	margin:20px;
 }
+
+
+#menu-section{
+	background-color:rgba(255,255,255,1.00);
+	border-radius:5px;
+	padding:10px;
+	margin-top:-80px;
+	width:130px;
+	height:170px;
+}
+
+
+.menu-button{
+	width:100px;
+	height:30px;
+	background-color:rgba(255,157,157,1.00);
+	border:none;
+	border-radius:2px;
+	margin-right:10px;
+	margin-top:20px;
+	font-size:14px;
+	color:rgba(255,255,255,1.00);
+}
+
 
 #text-edit{
 	height:44px;
 	width:100%;
 	background-color:rgba(255,255,255,1.00);
-	padding-top:50px;
+	padding-top:80px;
+}
+
+#listtype-edit{
+	margin:5px;
+	font-weight:600;
+	margin-left:200px;
+	width:200px;
+	height:20px;
+	border:thin;
+	border-color:rgba(168,168,168,1.00);
+	border-style:solid;
+	border-radius:5px;
+	padding:5px;
+	float:left;
+}
+
+.listtype-edit-button{
+	width:50px;
+	height:20px;
+	background-color:rgba(255,79,81,1.00);
+	border:none;
+	border-radius:4px;
+	font-weight:bold;
+	color:rgba(255,255,255,1.00);	
+}
+
+.listtype-edit-button:hover{
+	background-color:rgba(255,157,157,1.00);
+	color:rgba(86,86,86,1.00);
 }
 
 #label{
@@ -43,6 +97,7 @@ body{
 	font-weight:600;
 	margin-left:200px;
 	width:130px;
+	height:20px;
 	border:thin;
 	border-color:rgba(168,168,168,1.00);
 	border-style:solid;
@@ -55,15 +110,49 @@ body{
 	margin:5px;
 	font-weight:600;
 	margin-left:200px;
-	width:250px;
+	width:260px;
+	height:20px;
 	border:thin;
 	border-color:rgba(168,168,168,1.00);
 	border-style:solid;
 	border-radius:5px;
-	padding:2px;
+	padding:5px;
 	float:left;
 }
 
+.text-edit-button{
+	width:24px;
+	height:24px;
+	float:left;
+	margin-top:-2px;
+	background-color:rgba(255,255,255,1.00);
+	border:none;
+	font-size:16px;
+}
+
+.text-edit-button:hover{
+	background-color:rgba(255,79,81,1.00);
+	color:rgba(255,255,255,1.00);
+	border-radius:4px;
+}
+
+#fontsize{
+	margin-right:30px;
+	width:30px;
+}
+
+#opsomming-icoon{
+	margin-left:30px;
+	background-image:url(elements/Opsomming_picture.png);
+	background-size:cover;
+	width:30px;
+}
+
+#opsomming-icoon:hover{
+	background-color:rgba(255,79,81,1.00);
+	border-radius:4px;
+	background-image:url(elements/Opsomming_picture_white.png);
+}
 
 
 .inbox-text{
@@ -73,35 +162,66 @@ body{
 	vertical-align:middle;
 }
 
-#low{
+.label-edit-button{
 	height:18px;
 	width:18px;
 	border-radius:4px;
 	border-color:rgba(147,147,147,1.00);
 	border-style:solid;
 	border:thick;
+}
+
+#low{
 	background-color:rgba(139,208,118,1.00);
 }
 
+#low:hover{
+	background-color:rgba(207,238,198,1.00);
+}
+
 #medium{
-	height:18px;
-	width:18px;
-	border-radius:4px;
-	border-color:rgba(147,147,147,1.00);
-	border-style:solid;
-	border:thick;
 	background-color:rgba(255,190,0,1.00);
 }
 
+#medium:hover{
+	background-color:rgba(255,223,131,1.00);
+}
+
 #high{
-	height:18px;
-	width:18px;
-	border-radius:4px;
-	border-color:rgba(147,147,147,1.00);
-	border-style:solid;
-	border:thick;
 	background-color:rgba(207,0,3,1.00);
 }
+
+#high:hover{
+	background-color:rgba(224,122,124,1.00);
+}
+
+.todolist-section{
+	padding:100px;
+	
+}
+
+.todolist-holder{
+	height:400px;
+	width:400px;
+	background-color:rgba(255,255,255,1.00);
+	box-shadow: 0px 0px 8px #B7B7B7;
+}
+
+.todolist-header{
+	background-color:rgba(153,255,153,1.00);
+	height:40px;
+	width:400px;
+}
+
+.todolist-header-title{
+	width:300px;
+	float:left;
+	margin:10px;
+	font-size:18px;
+	font-weight:800;
+	color:rgba(74,98,74,1.00);
+}
+
 
 #addList{
 	margin:2%;
