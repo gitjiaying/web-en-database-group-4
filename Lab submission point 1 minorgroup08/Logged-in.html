@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Get Your Sh*t Done</title>
+<link rel="stylesheet" type="text/css" href="../Site/logged-in_site/Logged-in_style.css">
 </head>
 
-<body leftmargin="0px" bottommargin="0px" topmargin="0px">
+<body>
 	<header align="center">
-    	<img id="header" src="elements/Menu-Bar.png" width="100%">
+    	<div id="header-holder">
+        </div>
     </header>
 	<div id="menu" align="right">
 	<input type="image" src="elements/Menu-button.png" onClick="$('#menu-section').show()">
@@ -43,6 +45,8 @@
     </footer>
 <script
 src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+
 <script>
 function addList() {
 	$("#todolists").append('<li> <ul class="todolist"> <p> Container for todolist</p> <button onClick="addTodo()">+</button> </ul> </li>');

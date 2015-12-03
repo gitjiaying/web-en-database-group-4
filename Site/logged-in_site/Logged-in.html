@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get Your Sh*t Done</title>
+<link rel="stylesheet" type="text/css" href="Logged-in_style.css">
+</head>
+
+<body>
+	<header>
+    	<div id="header-holder">
+        <img src="elements/Banner3.png" id="header-logo">
+       	<div id="menu" align="right">
+			<input id="menu-button" type="image" src="../../Lab submission point 1 minorgroup08/elements/Menu-button.png" onClick="$('#menu-section').show()">
+				<section id="menu-section">
+			<input id="sort" type="button" value="sort todo's">
+				</section>
+		</div>
+        </div>
+        
+        <div id="text-edit">
+        	<div id="label">
+                <div class="inbox-text">Label:</div>
+                <button id="low"></button>
+                <button id="medium"></button>
+                <button id="high"></button>
+		</div>
+        	<div id="text-menu">
+                <div class="inbox-text">Text:</div>
+                <button id="fontsize">12</button>
+                <button id="bold">B</button>
+                <button id="italic">I</button>
+                <button id="underlined">U</button>
+                <input type="image" src="elements/Opsomming_picture.png" height="18px" align="middle">
+  </header>
+	
+    <main>
+	<nav> 
+		
+		
+	</nav>
+	<div class="todolist-section" align="center">
+		<ul id="todolists">
+		</ul> 
+	</div>
+    
+   <div id="add-holder" align="right">
+   		<input align="right" id="addList" type="image" src="../../Lab submission point 1 minorgroup08/elements/Add-button.png" onClick ="addList()">
+   </div>
+    </main>
+
+    <footer>
+    </footer>
+<script
+src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+
+<script>
+function addList() {
+	$("#todolists").append('<li> <ul class="todolist"> <p> Container for todolist</p> <button onClick="addTodo()">+</button> </ul> </li>');
+};
+
+function addTodo() {
+var ding = $(this);
+console.log(ding);
+	$(this).parent().append('<li> <p> container for todo </p> </li>');
+};
+function main() {
+	$('#menu-section').hide();
+};
+
+$(document).ready(main);
+</script>
+</body>
+</html>
