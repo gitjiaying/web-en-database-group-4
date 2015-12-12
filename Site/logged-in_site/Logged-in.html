@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Get Your Sh*t Done</title>
 <link rel="stylesheet" type="text/css" href="Logged-in_style.css">
+<link rel="shortcut icon" href="elements/favicon.ico">
 </head>
 
 <body>
@@ -11,7 +12,7 @@
     	<div id="header-holder">
         <a href="Logged-in.html"><img src="elements/Banner3.png" id="header-logo"></a>
        	<div id="menu" align="right">
-				<input id="menu-button" type="image" src="../../Lab submission point 1 minorgroup08/elements/Menu-button.png" onClick="$('#menu-section').show()">
+				<input id="menu-button" type="image" src="elements/Menu-button.png">
 				<div id="menu-section">
 					<input id="account" type="button" value="Acount" class="menu-button" style="margin-top:75px">
                     <input id="Log-out" type="button" value="Log-out" class="menu-button">
@@ -53,20 +54,47 @@
 		<ul id="todolists">
 		</ul> 
         </div>
+        
+        
 	</div>
     
     </main>
     
     <footer>
     	<div id="add-holder">
-   			 <input align="right" id="addList" type="image" src="elements/Add-button.png" width="10%" onClick ="addList()">
+        <div align="right">
+        	<input id="addList-button" type="image" src="elements/Add-button_white.png">
+            </div>
     	</div>
     </footer>
 <script
 src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="client-app.js">
+</script>
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script type="text/javascript">
+
+
+
+
+
 function addList() {
 	$("#todolists").append('<li> <ul class="todolist"> <p> Container for todolist</p> <button onClick="addTodo()">+</button> </ul> </li>');
 };
@@ -76,9 +104,26 @@ var ding = $(this);
 console.log(ding);
 	$(this).parent().append('<li class="todo"> <p> container for todo </p> </li>');
 };
+
 function main() {
 	$('#menu-section').hide();
-};
+	$(document).ready(function(){
+	 $("#menu-button").click(function(){
+        $("#menu-section").fadeToggle();
+		var src1 = "elements/Menu-button.png";
+		var src2 = "elements/Menu-button_close.png";
+		if($("#menu-button").attr("src") === src1){
+		$("#menu-button").attr("src",src2);
+		}
+		else{
+			$("#menu-button").attr("src",src1);
+		};
+    });
+	});
+	};
+
+
+
 
 $(document).ready(main);
 </script>
