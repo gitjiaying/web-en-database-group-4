@@ -50,7 +50,9 @@
             	<div class="todolist-header-title">Iets moet gedaan worden</div>
                 <input id="todolist-menubutton" type="image" src="elements/Menu-button-groen.png" align="right">
             </div>
-            
+            <div align="right">
+            <div id="List-Menu"></div> 
+            </div>
 		<ul id="todolists">
 		</ul> 
         </div>
@@ -69,31 +71,11 @@
     </footer>
 <script
 src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
 <script src="client-app.js">
 </script>
-<script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script type="text/javascript">
-
-
-
-
 
 function addList() {
 	$("#todolists").append('<li> <ul class="todolist"> <p> Container for todolist</p> <button onClick="addTodo()">+</button> </ul> </li>');
@@ -107,7 +89,20 @@ console.log(ding);
 
 function main() {
 	$('#menu-section').hide();
+	$('#List-Menu').hide();
 	$(document).ready(function(){
+		$("#todolist-menubutton").click(function(){
+			$("#List-Menu").fadeToggle();
+			var src3 = "elements/Menu-button-groen.png";
+			var src4 = "elements/Menu-button-groen-close.png";
+			if($("#todolist-menubutton").attr("src") === src3){
+				$("#todolist-menubutton").attr("src",src4);
+			}
+			else{
+				$("#todolist-menubutton").attr("src",src3);
+			};
+			
+		});
 	 $("#menu-button").click(function(){
         $("#menu-section").fadeToggle();
 		var src1 = "elements/Menu-button.png";
