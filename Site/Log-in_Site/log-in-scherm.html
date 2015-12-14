@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Get your sh*t done</title>
 <link rel="stylesheet" type="text/css" href="../../../../TU delft/Web- en database/Log-in_Site/Login_style.css">
 <link rel="shortcut icon" href="elements/favicon.ico">
 </head>
@@ -14,40 +14,78 @@
 </header>
 <main>
 <div align="center">
+<div align="center" id="formholder">
 		<form id="Sign-up-form">
         	<div align="left" id="inlog-box">
-            <p id="header-form">Je beheert al je ToDo's makkelijk en overzichtelijk. Begin direct, dus echt nu:</p>
+            <p id="header-form">Je beheert al je ToDo's makkelijk en overzichtelijk. Begin direct:</p>
             <div>
-			<input type="text" name="firstname" value="" placeholder="Voornaam " size="8">
-			<input type="text" name ="lastname" value="" placeholder="Achternaam " size="15">
+			<input type="text" name="firstname" value="" placeholder="Voornaam " size="8" id="firstname">
+			<input type="text" name ="lastname" value="" placeholder="Achternaam " size="15" id="lastname">
 			<br>
             </div>
 			<br>
-			<input type="text" name = "email" value="" placeholder="E-mail" size="28">
+			<input type="text" name = "email" value="" placeholder="E-mail" size="28" id="email">
 			<br>
 			<br>
-			<input type="password" name = "password" value="" placeholder="Wachtwoord" size="20">
+			<input type="password" name = "password" value="" placeholder="Wachtwoord" size="20" id="password">
 			<br>
             <br>
-            <input type="password" name = "password2" value="" placeholder="Herhaal wachtwoord" size="20">
+            <input type="password" name = "password2" value="" placeholder="Herhaal wachtwoord" size="20" id="passwordcheck">
             <br>
             </div>
-            <div id="Button-holder" align="left">
+            <div id="Button-holder" align="center">
 			<input id="Sign-up" type="submit" value="Sign Up" onClick = "document.getElementById('Sign-up-form').submit();" align="left">
-            <input id="Sign-in" type="submit" value="Sign Up" onClick = "document.getElementById('Sign-up-form').submit();">
             </div>
 		</form>
-     </div>
+        
+        
+        <button id="to-signin">I already have an account</button>
+        </div>
+        </div>
 </main>
 
 <footer align="center">
     <div align="center">
-    	<img src="elements/Makkelijk en overzichtelijk je to-do’s beheren.png" id="footer-picture">
-   	</div>
+    	</div>
+   	<img src="elements/Makkelijk en overzichtelijk je to-do’s beheren.png" id="footer-picture">
 <div align="center">
 
 
 </div>
 </footer>
+<script
+src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+	function main(){
+		var tel = 0;
+		$("#to-signin").click(function(){
+			tel = tel + 1;
+			if($("#to-signin").text() === "I already have an account"){
+			$("#firstname").fadeOut();
+			$("#lastname").fadeOut();
+			$("#passwordcheck").fadeOut();
+			$("#formholder").animate({
+				height:350});
+			$("#Sign-up").val("Sign In");
+			$("#email").animate({marginTop:-10});
+			$("#to-signin").text("Create an account");
+			};
+			if(tel === 2){
+			$("#firstname").fadeIn();
+			$("#lastname").fadeIn();
+			$("#passwordcheck").fadeIn();
+			$("#formholder").animate({
+				height:380});
+			$("#Sign-up").val("Sign Up");
+			$("#email").animate({marginTop:0});
+			$("#to-signin").text("I already have an account");
+			tel = 0;
+			};
+			
+		});
+	};
+$(document).ready(main);
+</script>
+
 </body>
 </html>
