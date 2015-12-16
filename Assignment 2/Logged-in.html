@@ -10,7 +10,7 @@
     	<img id="header" src="elements/Menu-Bar.png" width="100%">
     </header>
 	<div id="menu" align="right">
-	<input type="image" src="elements/Menu-button.png" onClick="$('#menu-section').show()">
+	<input class="menu" type="image" src="elements/Menu-button.png" onClick="$('#menu-section').show()">
 	<section id="menu-section">
 		<input id="sort" type="button" value="sort todo's"></button> 
 	</section>
@@ -36,26 +36,31 @@
 		<ul id="todolists">
 		</ul> 
 	</div>
+	<!--
    <input align="right" id="addList" type="image" src="elements/Add-button.png" width="10%" onClick ="addList()">
+    --!>
+     <input align="right" id="addList" type="image" src="elements/Add-button.png" width="10%">
     </main>
 
     <footer>
     </footer>
 <script
 src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src ="logged-in.js"></script>
 <script>
-function addList() {
-	$("#todolists").append('<li> <ul class="todolist"> <p> Container for todolist</p> <button onClick="addTodo()">+</button> </ul> </li>');
-};
+//function addList() {
+//	$("#todolists").append('<li> <ul class="todolist"> <p> Container for todolist</p> <button onClick="addTodo()">+</button> </ul> </li>');
+//};
 
 function addTodo() {
 var ding = $(this);
 console.log(ding);
 	$(this).parent().append('<li> <p> container for todo </p> </li>');
 };
-function main() {
-	$('#menu-section').hide();
-};
+
+//function main() {
+//	$('#menu-section').hide();
+//};
 
 $(document).ready(main);
 </script>
