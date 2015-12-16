@@ -119,7 +119,7 @@ function addTaskList() {
 			var thisListnumber = $(this).parent().attr('class').split(' ')[1]; //get the second class of thisList by splitting on the whitspaces in the class attribute and that will give an array of values, we take the one at index1 which equals the second class
 			todolists[thisListnumber].setName(newTitle); //update the array
 		};
-	};
+	});
 
 	var k = todolists.push(newTodolist); //push at the end 
 	UpdateTodoList($new_todolist, todolists.length); //call the update 
@@ -146,13 +146,13 @@ function addList() {
 		addNoteList();
 		$(this).fadeOut();
 		$('.taskList').fadeOut();
-	};);
+	});
 
 	$(".taskList").on('click', function () {
 		addTaskList();
 		$(this).fadeOut();
 		$('.noteList').fadeOut();
-	};);
+	});
 };
 $('#addList-button').on('click', addList);
 
@@ -198,17 +198,17 @@ $("#italic").on('click', Style("italic"));
 $("#underlined").on('click', Style("underline"));
 
 //add todo
-function addTodo() {
-	var newTodo = new ToDo();
+function addTodo(event) {
+	var newTodo = new Todo();
 
 	var $new_todo = $('<li>');
-	var thisList = $(this).parent().attr('class').split(' ')[1]); //get index of the todoList in the todolists-array
+	var thisList = $(event).parent().attr('class').split(' ')[1]; //get index of the todoList in the todolists-array
 	
 	todolists[thisList -1].todos.push(newTodo);
 	var n = todolists[thisList-1].todos.length;
 	$new_todo.addClass('todo ' + n + ' todoIn ' + thisList);
 	$new_todo.setAttribute('data-label', 'low' );
-	$(this).parent().append($new_todo);
+	$(event).parent().append($new_todo);
 
 	var $content = $('<input type="text">');
 	$content.setAttribute('class', 'todo-content');
@@ -227,7 +227,6 @@ function addTodo() {
 $('.addTodo').on('click', addTodo());
 
 };
-
 $(document).ready(main);
 
 
