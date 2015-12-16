@@ -170,16 +170,37 @@ function main() {
 
     var $content = $('<input type="text">');
     $content.attr('class', 'todo-content');
+    $content.on('keypress', function(event){
+        if(event.which === 13) {
+        todolists[thisList -1].todos[n-1].setContent($(this).val());
+        var newContent = $(this).val();
+        $(this).val(newContent);
+        };
+    });
     $content.focus(Label);
     $new_todo.append($content);
 
     var $status = $('<input>');
     $status.attr('class', 'status undone');
+    $status.on('keypress', function(event){
+        if(event.which === 13) {
+        todolists[thisList -1].todos[n-1].setStatus($(this).val());
+        var newStatus = $(this).val();
+        $(this).val(newStatus);
+        };
+    });
     $new_todo.append($status);
 
     var $dueDate = $('<input>');
     $dueDate.attr('class', 'duedate');
     $dueDate.attr("placeholder", "set duedate DD/MM/YY");
+    $dueDate.on('keypress', function(event){
+        if(event.which === 13) {
+        todolists[thisList -1].todos[n-1].setDueDate($(this).val());
+        var newDueDate = $(this).val();
+        $(this).val(newDueDate);
+        };
+    });
     $new_todo.append($dueDate);
 
     };
