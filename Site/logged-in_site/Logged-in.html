@@ -48,16 +48,13 @@
     	<div class="todolist-holder">
         	<div class="todolist-header">
             	<div class="todolist-header-title">Iets moet gedaan worden</div>
-                <input id="todolist-menubutton" type="image" src="elements/Menu-button-groen.png" align="right">
+                <input class="todolist-menubutton" type="image" src="elements/Menu-button-groen.png" align="right">
             </div>
             <div align="right">
-            <div id="List-Menu"></div> 
+            <div class="List-Menu"></div> 
             </div>
-		<ul id="todolists">
-		</ul> 
-        </div>
-        
-        
+       	 </div>
+   
 	</div>
     
     </main>
@@ -170,30 +167,47 @@ function addTaskList() {
     var newTodolist = new TodoList(); //add to todolistList
     var k = todolists.push(newTodolist); //push at the end 
     var $new_todolist = $("<div>"); //jquery to append to the DOM, create a new list element with a nested unordered list
-     //$new_todolist.setAttribute('class','todolist-holder ' + todolists.length -1 );
-    $new_todoList.setAttribute('data-label', todolists[todolists.length -1].getPriority());
+	var index = (todolists.length).toString();
+console.log(index);
+     $new_todolist.addClass('todolist-holder ' + index + " low");
     $('.todolist-section').append($new_todolist);
 
     
+	var $header = $('<div class="todolist-header">');
+	$new_todolist.append($header);
+ 
     var $title = $('<input type="text" name = "title" size ="10" class="todolist-header-title" value="">'); 
-    $new_todolist.append($title);
+    $header.append($title);
+
+var $addtodoButton = $("<button>"); //or $("input") for the add - todobutton
+$addtodoButton.text("+");
+    $addtodoButton.addClass("addTodo");
+    $header.append($addtodoButton); 
+
+	
+var $todolistmenu = $('<input  class="todolist-menubutton" type="image" src="elements/Menu-button-groen.png" align="right">');
+	$header.append($todolistmenu);
+	$todolistmenu.on("click", ClickTodomenu);
+
+	var $listmenu = $("<div class='list-section' align='right'>");
+	$new_todolist.append($listmenu);
+
+	var $listmenuthing = $('<div class="List-Menu" style="display: none;">');
+	$listmenu.append($listmenuthing);
+	
 
     var $todos = $("<ul>"); //ul for the todos in this list ($new_todolist)
     $todos.addClass("todos");
     $new_todolist.append($todos);
 
-    var $addtodoButton = $("<button>"); //or $("input") for the add - todobutton
-    $addtodoButton.addClass("addTodo");
-    //$addtodoButton.setAttribute("value", "+");
-    $addtodoButton.innerHTML= "add todo-item"
-    $new_todolist.append($addtodoButton); 
+   
     
     $('.todolist-header-title').on('keypress', function(event){ //if focus on the input field and a key is pressed, then function is called
         if(event.which === 13) { //enter key pressed
             var newTitle =$(this).val(); //or $(event).val() ?, get the input
             $(this).val(newTitle); //set the input as the value for this input field
-            var thisListnumber = $(this).parent().attr('class').split(' ')[1]; //get the second class of thisList by splitting on the whitspaces in the class attribute and that will give an array of values, we take the one at index1 which equals the second class
-            todolists[thisListnumber].setName(newTitle); //update the array
+            var thisListnumber = $(this).parent().attr('class').split(' ')[1]; 
+            todolists[thisListnumber -1].setName(newTitle); //update the array
         };
     });
 
@@ -204,20 +218,25 @@ $('#addList-button').on('click', addTaskList);
 
 
 	$('#menu-section').hide();
-	$('#List-Menu').hide();
-	$(document).ready(function(){
-		$("#todolist-menubutton").click(function(){
-			$("#List-Menu").fadeToggle();
+	$('.List-Menu').hide();
+	function ClickTodomenu(){
+			var $listmenu = $(this).parent().siblings(".list-section").children(".List-Menu");
+			$listmenu.fadeToggle();
 			var src3 = "elements/Menu-button-groen.png";
 			var src4 = "elements/Menu-button-groen-close.png";
-			if($("#todolist-menubutton").attr("src") === src3){
-				$("#todolist-menubutton").attr("src",src4);
+			
+			if($(this).attr("src") === src3){
+				$(this).attr("src",src4);
 			}
 			else{
-				$("#todolist-menubutton").attr("src",src3);
+				$(this).attr("src",src3);
 			};
 			
-		});
+		};
+
+	$(document).ready(function(){
+		$(".todolist-menubutton").click(ClickTodomenu);
+
 	 $("#menu-button").click(function(){
         $("#menu-section").fadeToggle();
 		var src1 = "elements/Menu-button.png";
