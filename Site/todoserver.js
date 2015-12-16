@@ -11,16 +11,16 @@ var port = 3000;
 app = express();
 http.createServer(app).listen(port);
 
-app.use(express.static(_dirname + "/client"));
+app.use(express.static(__dirname + "/client"));
 
 app.post("/update", function(req, res) {
 	jsonTodolists = req.body;
 });
 
 app.get("/", function(req, res) {
-	res.sendFile("/client/Log-in_Site/log-in-scherm.html");
+	res.sendFile(__dirname + "/client/Log-in_Site/log-in-scherm.html");
 });
 
 app.get("/logged-in", function(req, res) {
-	res.sendFile("/client/logged-in_site/logged-in.html");
+	res.sendFile(__dirname + "/client/logged-in_site/logged-in.html");
 });
