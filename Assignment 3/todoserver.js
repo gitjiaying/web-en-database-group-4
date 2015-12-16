@@ -9,6 +9,7 @@ var jsonTodolists;
 //var port = process.argv[2]; //in command line een poort aangeven
 var port = 3000;
 app = express();
+http.createServer(app).listen(port);
 
 app.use(express.static(_dirname + "/client"));
 
@@ -16,7 +17,7 @@ app.post("/update", function(req, res) {
 	jsonTodolists = req.body;
 });
 
-app.get("/log-in", function(req, res) {
+app.get("/", function(req, res) {
 	res.sendFile("/client/Log-in_Site/log-in-scherm.html");
 });
 
